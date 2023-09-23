@@ -1,0 +1,5 @@
+{
+    "redirects": [
+      { "source": "/user", "destination": "/api/upload", "statusCode": 301 }
+    ]
+  }

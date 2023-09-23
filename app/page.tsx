@@ -25,7 +25,7 @@ export default function HomePage() {
       const data = new FormData();
       data.set("file", file);
 
-      const res = await fetch("/api/upload", {
+      const res = await fetch("./api/upload", {
         method: "POST",
         body: data,
       });
@@ -73,7 +73,7 @@ export default function HomePage() {
       const data = new FormData();
       data.set("file", file);
 
-      const res = await fetch("/api/upload", {
+      const res = await fetch("./api/upload", {
         method: "POST",
         body: data,
       });

@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 import {v2 as cloudinary} from 'cloudinary';
+import { NextApiRequest, NextApiResponse } from "next";
 
+export const config = {
+  api: {
+      bodyParser: false,
+  },
+}
           
 cloudinary.config({ 
   cloud_name: 'dslwzd7bm', 

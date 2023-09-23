@@ -22,10 +22,13 @@ export default function HomePage() {
     const formdatos = new FormData();
     formdatos.append("file", file);
     try {
+      const url_api = "http://localhost:3000/api/upload"
+      
       const data = new FormData();
       data.set("file", file);
 
-      const res = await fetch("./api/upload", {
+
+      const res = await fetch(url_api, {
         method: "POST",
         body: data,
       });
@@ -70,10 +73,13 @@ export default function HomePage() {
     setWhileUpload(1);
 
     try {
+
+      const url_api = "http://localhost:3000/api/upload"
+
       const data = new FormData();
       data.set("file", file);
 
-      const res = await fetch("./api/upload", {
+      const res = await fetch(url_api, {
         method: "POST",
         body: data,
       });

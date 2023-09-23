@@ -19,8 +19,6 @@ export default function HomePage() {
     setFile(file);
     setWhileUpload(1);
 
-    const formdatos = new FormData();
-    formdatos.append("file", file);
     try {
       const data = new FormData();
       data.set("file", file);
@@ -73,7 +71,7 @@ export default function HomePage() {
       const data = new FormData();
       data.set("file", file);
 
-      const res = await fetch("./api/upload", {
+      const res = await fetch("/api/upload", {
         method: "POST",
         body: data,
       });

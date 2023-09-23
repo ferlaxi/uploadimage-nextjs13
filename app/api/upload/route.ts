@@ -1,12 +1,5 @@
 import { NextResponse } from "next/server";
 import {v2 as cloudinary} from 'cloudinary';
-import { NextApiRequest, NextApiResponse } from "next";
-
-export const config = {
-  api: {
-      bodyParser: false,
-  },
-}
           
 cloudinary.config({ 
   cloud_name: 'dslwzd7bm', 
@@ -16,10 +9,6 @@ cloudinary.config({
 
 export async function POST(request:any) {
   const data = await request.formData();
-
-  if (data.get('file') == undefined) {
-    return NextResponse.json("No se ha subido ninguna imagen", {status: 400})
-  } 
 
   //save in memory
   const bytes = await data.get('file').arrayBuffer()
